@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/car">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="Type and Run"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +26,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Make:" />
+            android:text="Make:"
+            style="@style/textStyle"/>
 
         <EditText
             android:id="@+id/etMake"
@@ -35,7 +38,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Year:" />
+            android:text="Year:"
+            style="@style/textStyle"/>
 
         <EditText
             android:id="@+id/etYear"
@@ -46,7 +50,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Color:" />
+            android:text="Color:"
+            style="@style/textStyle"/>
 
         <EditText
             android:id="@+id/etColor"
@@ -57,7 +62,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Purchase price ($):" />
+            android:text="Purchase price ($):"
+            style="@style/textStyle"/>
 
         <EditText
             android:id="@+id/etPrice"
@@ -68,7 +74,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Engine size (litre):" />
+            android:text="Engine size (litre):"
+            style="@style/textStyle" />
 
         <EditText
             android:id="@+id/etEngine"
@@ -103,13 +110,13 @@
             android:inputType="none" />
     </LinearLayout>
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
         <TextView
             android:id="@+id/tvCars"
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="200dp"
             android:background="#FFC107"/>
     </ScrollView>

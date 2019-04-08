@@ -9,11 +9,15 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnPetrol, btnDiesel;
     private TextView tvResult;
     private EditText etMake, etYear, etColor, etPrice, etEngine;
+    private String a = "";
+    private int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +69,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(validate()){
+            String make = etMake.getText().toString();
+            Number year = Integer.parseInt(etYear.getText().toString());
+            String color = etColor.getText().toString();
+            Double price = Double.parseDouble(etPrice.getText().toString());
+            Double engine = Double.parseDouble(etEngine.getText().toString());
+            Car pc = new Car();
+
             switch(v.getId()){
                 case R.id.btnPetrol:
-                    tvResult.setText("Say Hello to Petrol Car");
+                    pc.setColor(color);
+                    pc.setEngine(engine);
+                    pc.setYear(year);
+                    pc.setMake(make);
+                    pc.setPrice(price);
+                    i++;
+                     a += pc.a(i);
+                    tvResult.setText(a);
                     break;
                 case R.id.btnDiesel:
-                    tvResult.setText("Say Hello to Diesel Car");
+                    pc.setColor(color);
+                    pc.setEngine(engine);
+                    pc.setYear(year);
+                    pc.setMake(make);
+                    pc.setPrice(price);
+                    i++;
+                    a += pc.a(i);
+                    tvResult.setText(a);
                     break;
 
             }
